@@ -5,7 +5,7 @@ import sklearn
 import csv
 import pickle
 import bz2file as bz2
-#app = Flask(__name__)
+app = Flask(__name__)
 #importing code csv
 a = pd.read_csv('code.csv')
 a.drop(a.columns[0],axis=1,inplace=True)
@@ -23,7 +23,7 @@ sc = pickle.load(open('standscaler.pkl', 'rb'))
 ms = pickle.load(open('minmaxscaler.pkl', 'rb'))
 
 # creating flask app
-app = Flask(__name__,template_folder='template')
+#app = Flask(__name__,template_folder='template')
 
 #@app.route('/')
 #def index():
