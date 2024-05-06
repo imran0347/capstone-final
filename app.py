@@ -5,7 +5,7 @@ import sklearn
 import csv
 import pickle
 import bz2file as bz2
-
+app = Flask(__name__)
 #importing code csv
 a = pd.read_csv('code.csv')
 a.drop(a.columns[0],axis=1,inplace=True)
@@ -69,5 +69,5 @@ def predict():
     return render_template('index.html', result=result)
 
 # python main
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8000, threaded=True, debug=True)
+#if __name__ == "__main__":
+ #   app.run(host='0.0.0.0', port=8000, threaded=True, debug=True)
